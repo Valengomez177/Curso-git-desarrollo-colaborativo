@@ -48,3 +48,12 @@ git log --oneline -2 # Corto solo el mensaje y solo 2 commits los últimos
 ```sh
 git diff
 ```
+
+## Empezando con ramas
+
+### Lista las ramas locales
+
+```sh
+git branch 
+```
+
