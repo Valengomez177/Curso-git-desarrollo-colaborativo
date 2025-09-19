@@ -7,7 +7,9 @@ Es un archivo que me permite hacer un commit para guardar una carpeta que no es 
 Es un archivo que nos permite ignorar archivos o carpetas completas que no quiero que se guarden dentro del repositorio.
 Se escribe siempre en la raiz del proyecto.
 
-## Marcar archivos que quiero que sean parte del próximo commit
+## Repaso comandos básicos 
+
+### Marcar archivos que quiero que sean parte del próximo commit
 Osea marcar archivos que estan en el working directory terminado y quiero llevarlos al área de confirmación para que sean parte del próximo commit.
 
 ```sh 
@@ -34,7 +36,7 @@ git commit -am "Mensaje" # Se agregan los archivos modificados y no se abre el e
 
 **NOTA**: Los mensajes idealmente pueden tener un máximo de 80 carácteres.
 
-## Ver los commits dentro del repositorio
+### Ver los commits dentro del repositorio
 
 ```sh
 git log # Largo con detalle
@@ -54,7 +56,13 @@ git diff
 ### Lista las ramas locales
 
 ```sh
-git branch -av
+git branch 
+```
+
+### Listar ramas remotas y locales
+
+```sh
+git branch -av 
 ```
 
 ### Crear una rama
@@ -76,4 +84,27 @@ git switch feature/ramas
 ```sh
 git switch -c <nombre-rama>
 git switch -c feature/ramas
+```
+
+## Comparar ramas entre sí
+
+```sh
+git diff <rama-con-la-cual-quier-hacer-la-comparacion>
+git diff main
+```
+
+
+## Borrado de ramas
+
+```sh
+git branch -d <nombre-de-rama>
+git branch -d dev
+```
+
+## Borrado de ramas de manera forzada
+Si el contenido de los commits no se encuentra en cualquier otra rama del repositorio me va a pedir confirmación GIT, no va a borrar esa rama.
+
+```sh
+git branch -D <nombre-de-rama>
+git branch -D dev
 ```
